@@ -15,7 +15,7 @@ class _LoginProviderState extends State<LoginProvider> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Título'),
+        title: Text('Login Provider'),
         centerTitle: true,
         elevation: 20,
       ),
@@ -25,22 +25,14 @@ class _LoginProviderState extends State<LoginProvider> {
         children: <Widget>[
           //Text('Numero de Clicks!!!! '),
           _crearEmail(),
-          _crearPassword()
+          _crearPassword(),
+          _crearBoton()
 
           //Text('$conteo',style: estiloTexto) //$ interpolacion string
         ],
       )
           // la mayoria de los Widgets solo pueden tener un child
           ),
-
-      //floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-
-        onPressed: () {
-          print('Hola Mundo!');
-        }, //:null,// hace disable el boton
-      ),
     );
   }
 
@@ -76,6 +68,17 @@ class _LoginProviderState extends State<LoginProvider> {
       onChanged: (valor) => setState(() {
         _email = valor;
       }),
+    );
+  }
+
+  Widget _crearBoton() {
+    return RaisedButton(
+      child: Text('Login'),
+      color: Colors.blue,
+      textColor: Colors.white,
+      shape: StadiumBorder(),
+      //se envia el context para abajp
+      onPressed: () => null,
     );
   }
 }
