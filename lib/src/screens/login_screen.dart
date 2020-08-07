@@ -109,7 +109,7 @@ class LoginProviders extends StatelessWidget {
           border: OutlineInputBorder(
               //personalizar que tan pronunciados quiero los border
               borderRadius: BorderRadius.circular(20)),
-          hintText: 'Paswword',
+          hintText: 'Pasword',
           labelText: 'Password',
           suffixIcon: Icon(Icons.lock_open),
           icon: Icon(Icons.lock)),
