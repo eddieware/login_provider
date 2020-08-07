@@ -42,7 +42,7 @@ class LoginProviders extends StatelessWidget {
             onPressed: () async {
               if (usrCntrollr.text.isNotEmpty &&
                   psswdCntrollr.text.isNotEmpty &&
-                  usrCntrollr.text == 'eddie' &&
+                  usrCntrollr.text == 'edd' &&
                   psswdCntrollr.text == 'pass') {
                 superUsuarioInfo.userInfo = usrCntrollr.text;
                 Navigator.pushNamed(context, '/profile');
@@ -59,7 +59,8 @@ class LoginProviders extends StatelessWidget {
                             SizedBox(
                               height: 10,
                             ),
-                            Text("Please fill Fields to granted access"),
+                            Text(
+                                "Please fill Fields to granted access or fix the missmatch"),
                           ],
                         ),
                         actions: <Widget>[
@@ -75,7 +76,7 @@ class LoginProviders extends StatelessWidget {
               }
             },
           ),
-          Text('user: eddie'),
+          Text('user: edd'),
           Text('psswd:pass')
 
           //Text('$conteo',style: estiloTexto) //$ interpolacion string
