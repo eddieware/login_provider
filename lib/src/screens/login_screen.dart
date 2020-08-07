@@ -43,7 +43,7 @@ class LoginProviders extends StatelessWidget {
               if (usrCntrollr.text.isNotEmpty &&
                   psswdCntrollr.text.isNotEmpty &&
                   usrCntrollr.text == 'eddie' &&
-                  psswdCntrollr.text == '123') {
+                  psswdCntrollr.text == 'pass') {
                 superUsuarioInfo.userInfo = usrCntrollr.text;
                 Navigator.pushNamed(context, '/profile');
               } else {
@@ -52,7 +52,16 @@ class LoginProviders extends StatelessWidget {
                     builder: (BuildContext context) {
                       return AlertDialog(
                         title: Text("Warning!"),
-                        content: Text("Please fill Fields to granted access"),
+                        content: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            FlutterLogo(size: 100),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text("Please fill Fields to granted access"),
+                          ],
+                        ),
                         actions: <Widget>[
                           new FlatButton(
                             child: Text("OK"),
@@ -67,7 +76,7 @@ class LoginProviders extends StatelessWidget {
             },
           ),
           Text('user: eddie'),
-          Text('psswd:123')
+          Text('psswd:pass')
 
           //Text('$conteo',style: estiloTexto) //$ interpolacion string
         ],
